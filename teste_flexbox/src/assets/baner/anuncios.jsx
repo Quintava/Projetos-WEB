@@ -18,6 +18,8 @@ function Anuncios() {
   function anterior() {
     setIndex((prev) => (prev - 1 + imagens.length) % imagens.length);
   }
+  
+  console.log("Olá")
 
   return (
     <div className="carousel">
