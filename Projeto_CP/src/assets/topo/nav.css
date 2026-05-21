@@ -1,0 +1,128 @@
+/* NAVBAR */
+.menuBox {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+
+  background: rgba(79, 117, 223, 0.95);
+  backdrop-filter: blur(8px);
+
+  border-bottom: 2px solid #b4e7fc;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* LOGO */
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ITENS DO MENU */
+.box {
+  position: relative;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+/* LINHA ANIMADA */
+.box::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: #b4e7fc;
+
+  transition: width 0.3s ease;
+}
+
+/* HOVER */
+.box:hover {
+  color: #b4e7fc;
+}
+
+.box:hover::after {
+  width: 100%;
+}
+
+/* BOTÃO MOBILE */
+.menuMobile {
+  display: none;
+
+  color: white;
+  font-size: 1.8rem;
+
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .menuBox {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .menuMobile {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+
+    top: 80px;
+    right: 0;
+
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    background: rgba(79, 117, 223, 0.98);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-top: 50px;
+
+    gap: 35px;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .box {
+    font-size: 1.2rem;
+  }
+}

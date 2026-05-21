@@ -1,0 +1,118 @@
+.inicioContainer {
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url('../img/frente-clube2.jpg');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicioOverlay {
+  width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    rgba(20, 35, 70, 0.65),
+    rgba(20, 35, 70, 0.75)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 20px 60px;
+}
+
+.inicioConteudo {
+  max-width: 900px;
+  text-align: center;
+  color: white;
+}
+
+.inicioEtiqueta {
+  display: inline-block;
+
+  margin-bottom: 20px;
+  padding: 8px 18px;
+
+  border: 1px solid #b4e7fc;
+  border-radius: 50px;
+
+  color: #b4e7fc;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.inicioConteudo h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.inicioConteudo p {
+  max-width: 720px;
+  margin: 0 auto 35px;
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.inicioBotoes {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.botaoInicio {
+  text-decoration: none;
+
+  padding: 14px 28px;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.botaoInicio.principal {
+  background-color: #4f75df;
+  color: white;
+}
+
+.botaoInicio.principal:hover {
+  background-color: #3d61c2;
+  transform: translateY(-3px);
+}
+
+.botaoInicio.secundario {
+  border: 2px solid #b4e7fc;
+  color: white;
+}
+
+.botaoInicio.secundario:hover {
+  background-color: #b4e7fc;
+  color: #1f2f5c;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .inicioConteudo h1 {
+    font-size: 2.8rem;
+  }
+
+  .inicioConteudo p {
+    font-size: 1rem;
+  }
+
+  .botaoInicio {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
