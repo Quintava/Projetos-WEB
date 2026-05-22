@@ -1,5 +1,6 @@
 import '../../index.css'
 import './nav.css'
+import emblema from '../img/emblema.png'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
@@ -11,7 +12,7 @@ function Navegacao() {
       <nav className='menuBox'>
 
         <div className='logo'>
-          Centro Português
+          <img src={emblema} alt="emblema Centro Português" />
         </div>
 
         <div className={`menu ${menuAberto ? 'active' : ''}`}>
@@ -20,8 +21,8 @@ function Navegacao() {
             Início
           </a>
 
-          <a href="#fotos" className='box' onClick={() => setMenuAberto(false)}>
-            Fotos
+          <a href="#espaco" className='box' onClick={() => setMenuAberto(false)}>
+            Espaço
           </a>
 
           <a href="#sobre" className='box' onClick={() => setMenuAberto(false)}>

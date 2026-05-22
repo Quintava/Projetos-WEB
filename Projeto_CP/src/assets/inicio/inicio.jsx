@@ -1,4 +1,7 @@
 import './inicio.css'
+import { FaInstagram } from 'react-icons/fa'
+import emblema from '../img/emblema.png'
+
 
 function Inicio() {
   return (
@@ -10,7 +13,11 @@ function Inicio() {
             Tradição • Eventos • Confraternização
           </span>
 
-          <h1>Centro Português</h1>
+          <img
+            src={emblema}
+            alt="Centro Português do Rio Grande"
+            className="logoInicio"
+          />
 
           <p>
             Um espaço acolhedor para festas, formaturas, celebrações e momentos
@@ -28,6 +35,8 @@ function Inicio() {
               rel="noopener noreferrer"
               className="botaoInicio secundario"
             >
+              <FaInstagram />
+
               Acompanhar no Instagram
             </a>
           </div>
